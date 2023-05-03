@@ -8,10 +8,12 @@ trigger:
       - master	  
       - feature/*
       #- refs/tags/{tagname}
-	exclude:
-      - refs/tags/ignoreme
-      - README.md
+    exclude:
+        - refs/tags/ignoreme
+        - README.md
   paths:
+    include:
+      - 'WeatherApiShared/*' 
     exclude:
       - 'WeatherApiOne/*'
       - 'WeatherApiTwo/*'
