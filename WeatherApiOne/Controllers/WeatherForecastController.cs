@@ -17,6 +17,7 @@ namespace WeatherApiOne.Controllers
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
+            _logger.LogInformation($"Initialized {nameof(WeatherForecastController)}");
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
