@@ -1,0 +1,19 @@
+# Build numbering format
+name: $(BuildID)
+
+trigger:
+  branches:
+    include:
+      - master
+      - feature/*
+  paths:
+    include:
+      - 'WeatherApiTwo/*'
+      - 'WeatherApiShared'
+ 
+pool:
+  vmImage: 'ubuntu-latest'
+ 
+steps:
+  - script: |
+      echo "Hello from 'WeatherApiTwo'"
