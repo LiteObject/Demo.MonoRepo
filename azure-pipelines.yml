@@ -3,9 +3,14 @@ name: $(BuildID)
 
 trigger:
   branches:
+    # More on paths: https://learn.microsoft.com/en-us/azure/devops/pipelines/repos/azure-repos-git?view=azure-devops&tabs=yaml#paths
     include:
       - master	  
       - feature/*
+      #- refs/tags/{tagname}
+	exclude:
+      - refs/tags/ignoreme
+      - README.md
   paths:
     exclude:
       - 'WeatherApiOne/*'
