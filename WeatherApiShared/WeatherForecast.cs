@@ -1,5 +1,8 @@
 namespace WeatherApiShared
 {
+    /// <summary>
+    /// Common model
+    /// </summary>
     public class WeatherForecast
     {
         public DateOnly Date { get; set; }
